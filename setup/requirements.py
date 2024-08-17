@@ -7,9 +7,9 @@ packages_to_install = [
   #   [ "echo", "yes", "|", "antlr4" ],
   #   [ sys.executable, "-m", "pip", "install", "antlr4-python3-runtime" ]
   # ]],
-  # [ 'overrides', [
-  #   [ sys.executable, "-m", "pip", "install", "overrides" ],
-  # ]]
+  [ 'jupyterlab', [
+    [ sys.executable, "-m", "pip", "install", "jupyterlab" ],
+  ]]
 ]
 install_all         = False
 
