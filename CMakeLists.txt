@@ -4,7 +4,7 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-project(template)
+project(notebook)
 include(cmake/generic/project.cmake)
 include(cmake/generic/publish.cmake)
 
