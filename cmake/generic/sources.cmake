@@ -205,7 +205,7 @@ function(configure_project_executable project_ref)
   print_all_project_sources()
   
   add_executable(${project_ref} ${${project_source_list}})
-  target_include_directories(${project_ref} PRIVATE ${project_root_dir}/include ${CMAKE_BINARY_DIR}/gen/include)
+  target_include_directories(${project_ref} PRIVATE ${cmake_can_include} ${cmake_gen_include})
   
   add_custom_command(
 	TARGET     ${project_ref}
@@ -227,7 +227,7 @@ function(configure_project_static_lib project_ref)
   print_all_project_sources()
   
   add_library(${project_ref} STATIC ${${project_source_list}})
-  target_include_directories(${project_ref} PRIVATE ${project_root_dir}/include ${CMAKE_BINARY_DIR}/gen/include)
+  target_include_directories(${project_ref} PRIVATE ${cmake_can_include} ${cmake_gen_include})
   install(TARGETS ${project_ref} DESTINATION ${project_root_dir}/bin)
   set_target_properties(${project_ref} PROPERTIES FOLDER ${project_folder})
 endfunction()
@@ -241,7 +241,7 @@ function(configure_project_script project_ref)
   print_all_project_sources()
   
   add_library(${project_ref} STATIC ${${project_source_list}})
-  target_include_directories(${project_ref} PRIVATE ${project_root_dir}/include ${CMAKE_BINARY_DIR}/gen/include)
+  target_include_directories(${project_ref} PRIVATE ${cmake_can_include} ${cmake_gen_include})
   install(TARGETS ${project_ref} DESTINATION ${project_root_dir}/bin)
   set_target_properties(${project_ref} PROPERTIES FOLDER ${project_folder})
   set_target_properties(${project_ref} PROPERTIES LINKER_LANGUAGE CXX)
