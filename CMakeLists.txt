@@ -22,11 +22,12 @@ include(cmake/generic/python.cmake)
 include(cmake/generic/artefacts.cmake)
 include(cmake/generic/sources.cmake)
 
-# Processing
-# ...
+# 3rd party
+include(cmake/generic/uwebsockets.cmake)
 
 # Subprojects
 add_subdirectory(src/version)
+add_subdirectory(src/server)
 
 # Publication
 finalise_publish()
