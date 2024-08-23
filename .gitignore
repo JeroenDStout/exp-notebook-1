@@ -1,8 +1,12 @@
 bin/
 build/
-zip/
-__pycache__/
-_junc_tree/
 vcpkg_installed/
+zip/
+_junc_tree/
+
+__pycache__/
+
+.ipynb
 .ipynb_checkpoints
+
 touch
