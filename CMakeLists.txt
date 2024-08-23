@@ -4,8 +4,8 @@
 
 cmake_minimum_required(VERSION 3.15)
 
-# Packages
-include(cmake/generic/vcpkg.cmake)
+# Toolchain
+include(cmake/generic/vcpkg_pre.cmake)
 
 # Project
 project(notebook)
@@ -13,6 +13,9 @@ include(cmake/generic/project.cmake)
 include(cmake/generic/publish.cmake)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+# Packages
+include(cmake/generic/vcpkg.cmake)
 
 # Languages
 include(cmake/generic/cxx.cmake)
